@@ -1,9 +1,12 @@
 ## dva 开发流程及核心概念
 
 #### 预备知识：
+
 - Npm
 - Nodejs
-- React
+- React 
+- babel (ES6到ES5的编译器)
+- antd (ant.design 蚂蚁金服界面组件库)
 
 ### 相关链接
 
@@ -51,4 +54,27 @@ app.router(({ history }) =>
   </Router>
 );
 
+```
+
+> 使用ant.design组件库组件
+
+```
+import React,{Component} from 'react';
+import styles from './index.less';
+import { Button } from 'antd';
+import 'antd/dist/antd.css';
+
+function HelloApp(){
+    return(
+    <div>
+        <p className={styles.normal}>
+            <div>hello world</div>
+            
+            <Button type="primary">Primary</Button>
+        </p>
+    </div>
+    );
+}
+
+export default HelloApp;
 ```

@@ -37,9 +37,9 @@ app.model({
 function mapStateToProps(state) {
   return { count: state.count };
 }
-const HomePage = connect(mapStateToProps)(CountApp);
+const HomePage = () => <HelloApp />;
 
-const HelloPage = () => <HelloApp />;
+const HelloPage = connect(mapStateToProps)(CountApp);
 app.router(({ history }) =>
   <Router history={history}>
     <Route path="/" component={HomePage} />

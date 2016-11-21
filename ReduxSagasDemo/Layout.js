@@ -1,6 +1,8 @@
+import React from 'react';
 import { Menu, Breadcrumb, Icon } from 'antd';
 
-import 'Layout.less';
+// 不能直接引入，需要webpack
+// import './Layout.css';
 
 const SubMenu = Menu.SubMenu;
 
@@ -59,7 +61,7 @@ const Layout = React.createClass({
             </div>
           </div>
           <div className="ant-layout-footer">
-          Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持
+          版权所有 © 2016 由线上数据部支持
           </div>
         </div>
       </div>

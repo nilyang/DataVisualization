@@ -25,11 +25,14 @@ const action = type => store.dispatch({type})
 
 function render() {
   ReactDOM.render(
-    <Counter
+    <Layout >
+      <Counter
       value={store.getState()}
       onIncrement={() => action('INCREMENT')}
       onDecrement={() => action('DECREMENT')}
-      onIncrementAsync={() => action('INCREMENT_ASYNC')} />,
+      onIncrementAsync={() => action('INCREMENT_ASYNC')} />
+      
+      </Layout>,
     document.getElementById('root')
   )
 }

@@ -1,8 +1,11 @@
 import React , {PropTypes} from 'react'
+import MainLayout from '../components/Layout/MainLayout'
 
 function HomePage() {
     return (
-        <div> User Route Component</div>
+        <MainLayout>
+        
+        </MainLayout>
     )
 }
 

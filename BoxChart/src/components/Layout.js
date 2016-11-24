@@ -2,7 +2,7 @@ import React from 'react';
 import { Menu, Breadcrumb, Icon } from 'antd';
 
 // 不能直接引入，需要webpack
-// import './Layout.css';
+import styles from './Layout.css';
 
 const SubMenu = Menu.SubMenu;
 
@@ -22,7 +22,7 @@ const Layout = React.createClass({
     return (
       <div className={collapse ? "ant-layout-aside ant-layout-aside-collapse" : "ant-layout-aside"}>
         <aside className="ant-layout-sider">
-          <div className="ant-layout-logo"></div>
+          <div className="ant-layout-logo">xxxx</div>
           <Menu mode="inline" theme="dark" defaultSelectedKeys={['user']}>
             <Menu.Item key="user">
               <Icon type="user" /><span className="nav-text">导航一</span>
@@ -55,7 +55,7 @@ const Layout = React.createClass({
           </div>
           <div className="ant-layout-container">
             <div className="ant-layout-content">
-              <div style={{ height: 220 }}>
+              <div style={{ height: 420 }}>
                 {this.props.children}
               </div>
             </div>

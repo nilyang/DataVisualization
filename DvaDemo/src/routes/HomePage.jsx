@@ -1,5 +1,6 @@
 import React , {PropTypes} from 'react'
 import {connect} from 'dva'
+import MainLayout from '../components/Layout/MainLayout'
 
 function HomePage(props) {
     console.log("\n----HomePage----\n",props)
@@ -8,7 +9,9 @@ function HomePage(props) {
         return data ? data.join("-") : "";
     }
     return (
-        <div> Join Remote Async Data:<h2> {getData(props.example)} </h2> </div>
+        <MainLayout>
+                <div> Join Remote Async Data:<h2> {getData(props.example)} </h2> </div>
+        </MainLayout>
     )
 }
 
